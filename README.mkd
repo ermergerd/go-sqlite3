@@ -1,25 +1,27 @@
 go-sqlite3
 ==========
 
-[![Build Status](https://travis-ci.org/mattn/go-sqlite3.png?branch=master)](https://travis-ci.org/mattn/go-sqlite3)
-[![Coverage Status](https://coveralls.io/repos/mattn/go-sqlite3/badge.png?branch=master)](https://coveralls.io/r/mattn/go-sqlite3?branch=master)
+[![Build Status](https://travis-ci.org/ermergerd/go-sqlite3.png?branch=master)](https://travis-ci.org/mattn/go-sqlite3)
+[![Coverage Status](https://coveralls.io/repos/ermergerd/go-sqlite3/badge.png?branch=master)](https://coveralls.io/r/ermergerd/go-sqlite3?branch=master)
 
 Description
 -----------
 
 sqlite3 driver conforming to the built-in database/sql interface
 
+This project is forked from the original mattn go-sqlite3 project.  The intention of the package is to remove the dependency on CGO by providing a minimalist port of the sqlite3 C library to go (only the bare minimum of functionality used by the mattn go-sqlite3 library).  This will greatly improve the full build time and the portability to other OS's and ARCH's (such as Linux ARM) which currently require a cross compiler and some linker flag shenanigans to make it work.
+
 Installation
 ------------
 
 This package can be installed with the go get command:
 
-    go get github.com/mattn/go-sqlite3
+    go get github.com/ermergerd/go-sqlite3
     
 Documentation
 -------------
 
-API documentation can be found here: http://godoc.org/github.com/mattn/go-sqlite3
+API documentation can be found here: http://godoc.org/github.com/ermergerd/go-sqlite3
 
 Examples can be found under the `./_example` directory
 
@@ -39,4 +41,6 @@ FAQ
 License
 -------
 
-MIT: http://mattn.mit-license.org/2012
+Forked from the original mattn go-sqlite3 package - http://mattn.mit-license.org (MIT)
+
+Updates for porting sqlite3 C implementation to go -  http://parkere.mit-license.org (MIT)
